@@ -43,7 +43,7 @@ function startGame() {
     const diceContainer = document.getElementById('dice-container');
     diceContainer.style.display = 'none';
 
-    document.body.dataset.mode = isGlitchMode ? 'glitchdle' : 'wordle';
+    document.body.dataset.mode = isGlitchMode ? 'glitchdle' : 'classic';
     if (isGlitchMode) {
         const strategy = GLITCH_STRATEGIES[currentGlitchType];
         const glitchInstance = getGlitchInstance(currentGlitchType, isHardMode);
