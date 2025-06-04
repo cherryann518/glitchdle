@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glitchdle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="button-container">
+            <!-- classic/glitchdle toggle -->
+            <button id="toggle-btn"></button>
+            <!-- glitch mode switch buttons -->
+            <button id="glitch-btn-1" style="display: none;">Single</button>
+            <button id="glitch-btn-2" style="display: none;">Dice</button>
+        </div>
+
+        <div class="title-container">
+            <h1 id="game-title"></h1>
+            <!-- hard mode button (by game-title)-->
+            <button id="hard-btn" style="display: none;">Hard</button>
+        </div>
+
+        <div id="game-container">
+            <div id="guess-count"></div>
+            
+            <div id="dice-container" style="display: none;">
+                <div class="dice-row">
+                    <div class="dice">
+                        <span class="dice-label">No Glitches</span>
+                        <div class="dice-value"></div>
+                    </div>
+                    <div class="dice">
+                        <span class="dice-label">One Glitch</span>
+                        <div class="dice-value"></div>
+                    </div>
+                    <div class="dice">
+                        <span class="dice-label">Two Glitches</span>
+                        <div class="dice-value"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="game-board"></div>
+            <div id="keyboard"></div>
+            <div id="message"></div>
+            <button id="restart-btn">Restart</button>
+        </div>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
