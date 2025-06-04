@@ -1,0 +1,14 @@
+# GLITCHDLE -- under construction
+
+Glitchdle is a unique twist on the classic word-guessing game, Wordle. In Glitchdle, players must navigate through various modes where glitches randomly alter the game, adding an extra layer of challenge and excitement.    
+
+## mode 1 - Timed correct   
+Randomly mark one letter incorrectly and correct it after the next guess.  
+
+## mode 2 - Detectors     
+Randomly mark one letter incorrectly.    
+*hard mode: no detectors*   
+
+## mode 3 - Dice rolls    
+Chances of no glitch, one glitch, and two glitches.    
+*hard mode: no hints*   
