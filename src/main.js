@@ -46,7 +46,7 @@ function startGame() {
     document.body.dataset.mode = isGlitchMode ? 'glitchdle' : 'classic';
     if (isGlitchMode) {
         const strategy = GLITCH_STRATEGIES[currentGlitchType];
-        const glitchInstance = getGlitchInstance(currentGlitchType, isHardMode);
+        const glitchInstance = getGlitchInstance(currentGlitchType, currentGlitchType === 'dice' ? true : isHardMode);
         
         const gameTitle = (currentGlitchType === 'single' || currentGlitchType === 'dice') && isHardMode 
             ? `Glitchdle - ${strategy.name} (Hard)`

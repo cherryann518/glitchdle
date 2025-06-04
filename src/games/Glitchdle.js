@@ -12,6 +12,12 @@ export class Glitchdle extends BaseGame {
         this.glitchType = glitchType;
         this.glitchType.game = this;
 
+        // Block access to DiceRoll normal mode
+        if (this.glitchType instanceof DiceRoll && !this.glitchType.hardMode) {
+            alert('Normal mode is still under construction. Please wait for an update.');
+            return;
+        }
+
         this.setupDetectorSystem();
 
         if (this.glitchType instanceof DiceRoll) {
