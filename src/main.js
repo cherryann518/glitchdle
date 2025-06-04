@@ -133,7 +133,6 @@ function switchGlitchMode(newMode) {
     
     currentGlitchType = newMode;
     isHardMode = false; 
-    console.log(`Switching to ${GLITCH_STRATEGIES[newMode].name} mode`);
     startGame();
 }
 
@@ -141,7 +140,6 @@ function toggleHardMode() {
     if (currentGlitchType !== 'single' && currentGlitchType !== 'dice') return;
     
     isHardMode = !isHardMode;
-    console.log(`Toggling hard mode: ${isHardMode ? 'ON' : 'OFF'}`);
     startGame();
 }
 

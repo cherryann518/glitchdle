@@ -71,7 +71,7 @@ export class BaseGame {
     // used in resetState()
     pickRandomWord() {
         const word = this.realWordles[Math.floor(Math.random() * this.realWordles.length)];
-        console.log("targetWord:", word); // for debugging
+        console.log("targetWord:", word);
         return word;
     }
 
