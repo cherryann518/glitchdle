@@ -1,4 +1,4 @@
-import { Wordle } from "./games/Wordle.js";
+import { Classic } from "./games/Classic.js";
 import { Glitchdle } from "./games/Glitchdle.js";
 import { buildKeyboard } from "./ui/keyboard.js";
 import { TimedCorrect } from "./games/glitch/TimedCorrect.js";
@@ -64,8 +64,8 @@ function startGame() {
             glitchType: glitchInstance
         });
     } else {
-        currentGame = new Wordle({
-            gameTitle: "Wordle",
+        currentGame = new Classic({
+            gameTitle: "",
             titleId: "game-title",
             boardId: "game-board",
             keyboardId: "keyboard",
@@ -85,7 +85,7 @@ function updateGlitchButtons() {
     const hardBtn = document.getElementById("hard-btn");
     
     if (!isGlitchMode) {
-        // Hide all glitch buttons when in Wordle
+        // Hide all glitch buttons when in Classic
         glitchBtn1.style.display = 'none';
         glitchBtn2.style.display = 'none';
         hardBtn.style.display = 'none';
@@ -148,14 +148,14 @@ function toggleHardMode() {
 document.addEventListener("DOMContentLoaded", () => {
     buildKeyboard("keyboard");
 
-    // Wordle/Glitchdle
+    // Classic/Glitchdle
     const toggleBtn = document.getElementById("toggle-btn");
     toggleBtn.addEventListener("click", e => {
         e.target.blur();
         isGlitchMode = !isGlitchMode;
         isHardMode = false;
         toggleBtn.textContent = isGlitchMode
-            ? "Switch to Wordle"
+            ? "Exit Glitchdle"
             : "Switch to Glitchdle";
         startGame();
     });
