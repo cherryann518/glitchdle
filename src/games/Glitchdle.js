@@ -166,8 +166,8 @@ export class Glitchdle extends BaseGame {
             
             diceEl.classList.add('rolling');
 
-            const imageUrl = `./images/dice-${diceValues[key]}.png`;
-            
+            const imageUrl = `public/images/dice-${diceValues[key]}.png`;
+
             setTimeout(() => {
                 diceEl.classList.remove('rolling');
                 diceEl.style.backgroundImage = `url('${imageUrl}')`;
